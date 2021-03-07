@@ -152,7 +152,7 @@ section {
   ===========================*/
 
 #home {
-    background: url(./images/background.jpg) no-repeat 50% 50%;
+    background: url(../images/background.jpg) no-repeat 50% 50%;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -295,7 +295,7 @@ section {
     text-decoration: underline;
 }
 
-.submit input [type="submit"] {
+.submit input[type="submit"] {
     color: rgb(225,225,225);
     cursor: pointer;
     border: none;
