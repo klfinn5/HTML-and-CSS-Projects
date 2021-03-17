@@ -1,7 +1,4 @@
 # HTML-and-CSS-Projects
-Contents of this file
----------------------
-*Introduction
 
 Introduction
 ------------
