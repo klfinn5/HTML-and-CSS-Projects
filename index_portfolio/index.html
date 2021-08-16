@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Head-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width"/>
+        <title>Kelsey Finn</title>
+        <link rel="stylesheet" type="text/css" href="./portfolio.css">
+    </head>
+
+    <!--Body-->
+    <body class="background">
+
+        <!--navbar-->
+        <div class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#github">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!--Breaks inserted to add space between navbar and first heading-->
+        <br>
+        <br>
+
+        <!--background video-->
+        <div id="home">
+            <video autoplay mute loop id="rain_video">
+                <source src="video/rain.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+
+        <!--Video text-->
+        <div class="video_text">
+            <h1 class="white-text">Kelsey's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>Creativity is allowing yourself to make mistakes. 
+                        <br>Art is knowing which ones to keep.
+                    </q>
+                    <br>-Scott Adams
+                    <br>
+                    <br>My name is Kelsey Finn. Welcome to my portfolio website. Let me tell you about my background and experience. 
+                    <br>
+                    <br>Thank you for stopping by and enjoy!
+                </p>
+            </strong>
+        </div>
+
+        <!--About-->
+        <div class="row" id="about">
+            <!--Left column-->
+            <div class="column_2">
+                <img src="./images/code.jpg" alt="matrix">
+            </div>
+
+            <!--Right column-->
+            <div class="column_1">
+                <h1>About</h1>
+                <p>
+                    I am a software developer who wants to help others have a stress-free and pleasant experience navigating websites and software. 
+                    <br>
+                    <br>As a mother, I love spending time with my family, creating art, and enjoying the outdoors. 
+                    <br>
+                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C#, and more.
+                    <br>
+                    <br>I am a full-stack developer and would love to help bring life to your project! <a href="#contact">Contact me below &#128522</a>
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub-->
+        <div class="row" id="github">
+            <!--Left column-->
+            <div class="column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/klfinn5" target="_blank">Kelsey's GitHub</a></p>
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="column_2">
+                <a href="https://github.com/klfinn5" target="_blank"><img src="./images/github.png" alt="github logo"></a>
+            </div>
+        </div>
+
+        <!--Contact-->
+        <div class="row" id="contact">
+            <!--Contact image, left column-->
+            <div class="column_2 column_tall">
+                <img src="./images/mail.jpg" alt="envelope">
+            </div>
+            <!--Contact form, right column-->
+            <div class="column_1 column_tall">
+                <h1>Contact</h1>
+                <!--Specifies where/how to send form data; leaving blank-->
+                <form action="https://formspree.io/f/xaylrprl" method="POST"><!--3rd party service to submit contact form, my formspree in action attribute-->
+                    <strong>
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="email" name="email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="message" name="message" placeholder="Please write your message here">
+                    </strong>
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <footer>
+            <p>
+                <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
+                <br>
+            </p>
+        </footer>
+
+
+
+    </body>
+</html>
