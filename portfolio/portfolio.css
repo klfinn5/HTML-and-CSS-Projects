@@ -149,7 +149,7 @@ footer {
 .navbar a {
     float: left; /* text floats left on navbar */
     display: block; /*ensures other text will be displayed on same line/row not new line*/
-    color: #white;
+    color: #fff;
     padding: .75vw 1vw; /*padding around text*/
     text-decoration: none; /*gets rid of underlines*/
     font-family: Avant Garde, Helvetica;
@@ -233,6 +233,8 @@ footer {
 }
 
 /* end video*/
+
+
 
 /* slideshow styling */
 

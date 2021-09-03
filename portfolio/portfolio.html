@@ -148,11 +148,8 @@
             <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
             <div class="form-popup" id="myForm"></div>
             <form action="https://formspree.io/f/xaylrprl" method="POST"><!--3rd party service to submit contact form, my formspree in action attribute-->
-                
-                <button type="button" class="btn cancel btn-outline-dark" onclick="closeForm()">x</button>
                 <h1>Contact</h1>
                 <!--Specifies where/how to send form data; leaving blank-->
-                    <strong>
                     <label for="name">Name:</label>
                         <input type="text" placeholder="Please enter your name here" name="name" required>
                     <label for="email">Email:</label>
@@ -161,11 +158,9 @@
                         <input type="text" placeholder="Please enter your phone number here" name="phone" required>
                     <label for="message">Message:</label>
                         <input type="text" placeholder="Please write your message here" name="message">
-                    </strong>
-                    <center>
+                        
                         <button type="submit" class=btn>Submit</button>
-                    </center>
-                    
+                        <button type="button" class="btn cancel" onclick="closeForm()">x</button>
                 </form>
             </div>
         </div>
