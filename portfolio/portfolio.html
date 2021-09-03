@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width"/>
         <title>Kelsey Finn</title>
         <link rel="stylesheet" type="text/css" href="./portfolio.css">
+        <script src="JS/main.js"></script>
+        
     </head>
 
     <!--Body-->
@@ -14,9 +16,11 @@
         <!--navbar-->
         <div class="navbar">
             <a class="active" href="#home">Home</a>
+            <a href="#slideshow">Slideshow</a>
             <a href="#about">About</a>
             <a href="#github">GitHub</a>
-            <a href="#contact">Contact</a>
+            <!--open/close contact form-->
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
         </div>
 
         <!--Breaks inserted to add space between navbar and first heading-->
@@ -25,7 +29,7 @@
 
         <!--background video-->
         <div id="home">
-            <video autoplay mute loop id="rain_video">
+            <video autoplay muted loop id="rain_video">
                 <source src="video/rain.mp4" type="video/mp4">
                 <!--Display message if video fails to run-->
                 Your browser does not support HTML5 video.
@@ -34,6 +38,7 @@
 
 
         <!--Video text-->
+        
         <div class="video_text">
             <h1 class="white-text">Kelsey's Portfolio</h1>
             <strong>
@@ -50,11 +55,59 @@
             </strong>
         </div>
 
+        <!--slideshow-->
+
+<div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!-- slide 1/ -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Square Personal Photo.png" alt="me">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- slide 2/5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos"> 
+                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <!-- slide 3/5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/C_Sharp_and_Dot_NET.png" alt="C# logo">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                    </div>
+                    <!-- slide 4/5-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/SQL_and_Database.jpg" alt="SQL logo"> 
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+                    <!-- slide 5/5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Square Custom Picture.png" alt="kuzco"> 
+                        <div class="text"><a class="white-text" onclick="openForm()" href="#Contact">Contact me now!</a></div> 
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
+            </div>
+        </div>
+
         <!--About-->
         <div class="row" id="about">
             <!--Left column-->
             <div class="column_2">
-                <img src="./images/code.jpg" alt="matrix">
+                <img src="images/Square Custom Picture.png" alt="kuzco">
             </div>
 
             <!--Right column-->
@@ -67,7 +120,7 @@
                     <br>
                     <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C#, and more.
                     <br>
-                    <br>I am a full-stack developer and would love to help bring life to your project! <a href="#contact">Contact me below &#128522</a>
+                    <br>I am a full-stack developer and would love to bring life to your project! <a href="#contact">Contact me below &#128522</a>
                     <br>
                 </p>
             </div>
@@ -90,26 +143,30 @@
             </div>
         </div>
 
-        <!--Contact-->
-        <div class="row" id="contact">
-            <!--Contact image, left column-->
-            <div class="column_2 column_tall">
-                <img src="./images/mail.jpg" alt="envelope">
-            </div>
-            <!--Contact form, right column-->
-            <div class="column_1 column_tall">
+
+        <!--contact form-->
+        <div id="contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm"></div>
+            <form action="https://formspree.io/f/xaylrprl" method="POST"><!--3rd party service to submit contact form, my formspree in action attribute-->
+                
+                <button type="button" class="btn cancel btn-outline-dark" onclick="closeForm()">x</button>
                 <h1>Contact</h1>
                 <!--Specifies where/how to send form data; leaving blank-->
-                <form action="https://formspree.io/f/xaylrprl" method="POST"><!--3rd party service to submit contact form, my formspree in action attribute-->
                     <strong>
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="email" name="email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="message" name="message" placeholder="Please write your message here">
+                    <label for="name">Name:</label>
+                        <input type="text" placeholder="Please enter your name here" name="name" required>
+                    <label for="email">Email:</label>
+                        <input type="text" placeholder="Please enter your email here" name="email" required>
+                    <label for="phone">Phone Number:</label>
+                        <input type="text" placeholder="Please enter your phone number here" name="phone" required>
+                    <label for="message">Message:</label>
+                        <input type="text" placeholder="Please write your message here" name="message">
                     </strong>
-                        <input type="submit" value="SUBMIT">
+                    <center>
+                        <button type="submit" class=btn>Submit</button>
+                    </center>
+                    
                 </form>
             </div>
         </div>
