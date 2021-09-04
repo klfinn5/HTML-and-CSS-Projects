@@ -460,7 +460,7 @@ button:hover, .form-container .btn:hover {
 .form-container .btn {
     background-color: white;
     color: black;
-    border-color: black;
+    border-color: rgb(70, 69, 69);
     margin-bottom: 1vh; /*adds space between submit and clow buttons*/
 }
 
