@@ -22,10 +22,6 @@
             <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
         </div>
 
-        <!--Breaks inserted to add space between navbar and first heading-->
-        <br>
-        <br>
-
         <!--background video-->
         <div id="home">
             <video autoplay muted loop id="rain_video">
@@ -147,9 +143,9 @@
         <div id="contact">
             <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
             <div class="form-popup" id="myForm"></div>
-            <form action="https://formspree.io/f/xaylrprl" method="POST"><!--3rd party service to submit contact form, my formspree in action attribute-->
-                <h1>Contact</h1>
-                <!--Specifies where/how to send form data; leaving blank-->
+                <form action="https://formspree.io/f/xaylrprl" method="POST" class="form-container"><!--3rd party service to submit contact form, my formspree in action attribute-->
+                    <h1>Contact</h1>
+                    <!--Specifies where/how to send form data; leaving blank-->
                     <label for="name">Name:</label>
                         <input type="text" placeholder="Please enter your name here" name="name" required>
                     <label for="email">Email:</label>
