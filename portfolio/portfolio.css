@@ -450,7 +450,7 @@ button {
 
 button:hover, .form-container .btn:hover {
     color: white;
-    background-color: black;
+    background-color: rgb(15, 51, 1);
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
     border-color: silver;
@@ -466,7 +466,7 @@ button:hover, .form-container .btn:hover {
 
 /*close button*/
 .form-container .cancel {
-    background-color: black;
+    background-color: rgb(36, 68, 34);
     color: white;
     border-color: gray;
 }
@@ -474,7 +474,7 @@ button:hover, .form-container .btn:hover {
 /*styling close buttom on hover*/
 .form-container .cancel:hover {
     color: white;
-    background-color: darkred;
+    background-color: rgb(97, 139, 0);
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
     border-color: black;
